@@ -1,0 +1,14 @@
+<!DOCTYPE HTML>
+<html>
+    <title>{{title}}</title>
+    <h1>template is working</h1>
+    {% for obj in objectlist %}
+    <h3>{{obj.id}}</h3>
+    <h3><a href={% url "posts:post_detail" id=obj.id %}>{{obj.title}}</a></h3>
+    <h3>{{obj.content}}</h3>
+    <h3>{{obj.updated}}</h3>
+    <h3>{{obj.timstamp}}</h3>
+    
+    <h2>************************************</h2>
+    {% endfor %}
+</html>
